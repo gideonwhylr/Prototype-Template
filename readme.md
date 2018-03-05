@@ -28,3 +28,6 @@ If you need to install sass on a mac run this command (you might need to run wit
 ```
 gem install sass
 ```
+
+### Viewing
+Simply open the `index.html` file in chrome. If you want to host it somewhere [surge.sh](http://surge.sh/) is a good option
