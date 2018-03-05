@@ -8,17 +8,38 @@
 	<link rel="stylesheet" href="all.css">
 	<link rel="stylesheet" href="bootstrap.css">
 	<script src="app.js"></script>
-	<title>P</title>
+	<title>Prototype</title>
 
 	<style>
 	</style>
 </head>
 
 <body ng-app="app" ng-controller="Controller as ctr" ng-cloak>
-	<div class="container">
+	<div class="container mt-4">
 		<div class="row">
 			<div class="col">
 				<h1>{{ ctr.title }}</h1>
+				<p>Here is how you can toggle stuff on an off</p>
+				<button class="btn btn-primary" ng-show="!ctr.showButton" ng-click="ctr.updateShowButton(true)">Show Second Button</button>
+				<button class="btn btn-primary" ng-show="ctr.showButton" ng-click="ctr.updateShowButton(false)">Hide Second Button</button>
+				<button class="btn btn-outline-secondary" ng-show="ctr.showButton">Second Button!</button>
+			</div>
+		</div>
+		<div class="row mt-4">
+			<div class="col">
+				<p>Here is how you can show an array of data.</p>
+				<button class="btn btn-secondary mr-2" ng-click="ctr.addItem()">Add Item</button>
+				<button class="btn btn-secondary" ng-click="ctr.removeItem()">Remove Item</button>
+			</div>
+		</div>
+		<div class="row mt-4">
+			<div class="col" ng-repeat="item in ctr.items">
+				<div class="card mb-4 box-shadow">
+					<div class="card-body">
+						<h4 class="card-text"><a href="">{{ item.title }}</a></h4>
+						<p class="card-text">{{ item.subtitle }}</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
