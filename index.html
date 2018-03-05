@@ -3,8 +3,10 @@
 	<!-- Mobile Styling -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Playfair+Display" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<script src="./bootstrap/dist/js/bootstrap.js"></script>
 	<link rel="stylesheet" href="all.css">
 	<link rel="stylesheet" href="bootstrap.css">
 	<script src="app.js"></script>
@@ -18,28 +20,7 @@
 	<div class="container mt-4">
 		<div class="row">
 			<div class="col">
-				<h1>{{ ctr.title }}</h1>
-				<p>Here is how you can toggle stuff on an off</p>
-				<button class="btn btn-primary" ng-show="!ctr.showButton" ng-click="ctr.updateShowButton(true)">Show Second Button</button>
-				<button class="btn btn-primary" ng-show="ctr.showButton" ng-click="ctr.updateShowButton(false)">Hide Second Button</button>
-				<button class="btn btn-outline-secondary" ng-show="ctr.showButton">Second Button!</button>
-			</div>
-		</div>
-		<div class="row mt-4">
-			<div class="col">
-				<p>Here is how you can show an array of data.</p>
-				<button class="btn btn-secondary mr-2" ng-click="ctr.addItem()">Add Item</button>
-				<button class="btn btn-secondary" ng-click="ctr.removeItem()">Remove Item</button>
-			</div>
-		</div>
-		<div class="row mt-4">
-			<div class="col" ng-repeat="item in ctr.items">
-				<div class="card mb-4 box-shadow">
-					<div class="card-body">
-						<h4 class="card-text"><a href="">{{ item.title }}</a></h4>
-						<p class="card-text">{{ item.subtitle }}</p>
-					</div>
-				</div>
+				<h1>{{ title }}</h1>
 			</div>
 		</div>
 	</div>

@@ -5,7 +5,9 @@ This template will help you get started prototyping with bootstrap. It includes 
 Download this folder and start editing `index.html`.
 
 ### Interactive
-To make the prototype interactive use AngularJS and edit `app.js`. There are some examples of lists and booleans in the default `index.html`
+To make the prototype interactive use AngularJS and edit `app.js`.
+
+Check out the `_example.html` file for a list of example interactive components and modules
 
 ### Styling
 To add styling you can use `all.css`.

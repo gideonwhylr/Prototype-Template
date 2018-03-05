@@ -1,0 +1,105 @@
+<head>
+  <meta charset="utf-8" />
+  <!-- Mobile Styling -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Playfair+Display" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="./bootstrap/dist/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="all.css">
+  <link rel="stylesheet" href="bootstrap.css">
+  <script src="_example.js"></script>
+  <title>Example Elements</title>
+
+  <style>
+  </style>
+</head>
+
+<body ng-app="app" ng-controller="Controller as ctr" ng-cloak>
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col">
+        <h1>Interactive Prototype Example Elements</h1>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col">
+        <h3>Show or Hide Elements</h3>
+        <p>Here is how you can toggle stuff on an off. This is implemented via AngularJS</p>
+        <button class="btn btn-primary" ng-show="!ctr.showButton" ng-click="ctr.updateShowButton(true)">Show Second Button</button>
+        <button class="btn btn-primary" ng-show="ctr.showButton" ng-click="ctr.updateShowButton(false)">Hide Second Button</button>
+        <button class="btn btn-outline-secondary" ng-show="ctr.showButton">Second Button!</button>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col">
+        <h3>Array of Data</h3>
+        <p>Here is how you can show an array of data. This is implemented via AngularJS</p>
+        <button class="btn btn-secondary mr-2" ng-click="ctr.addItem()">Add Item</button>
+        <button class="btn btn-secondary" ng-click="ctr.removeItem()">Remove Item</button>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col" ng-repeat="item in ctr.items">
+        <div class="card mb-4 box-shadow">
+          <div class="card-body">
+            <h4 class="card-text"><a href="">{{ item.title }}</a></h4>
+            <p class="card-text">{{ item.subtitle }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col">
+        <!-- Button trigger modal -->
+        <h3>Modal</h3>
+        <p>Here is a example of a modal. This is handled via bootstrap JS (but could be updated to be done via AngularJS)</p>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Launch demo modal</button>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row mt-4">
+      <div class="col">
+        <h3>Tabbed Nav Bar</h3>
+        <p>Here is a example of a tabbed navbar. This is handled via bootstrap JS (but could be updated to be done via AngularJS)</p>
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
+            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">Tab 1</div>
+          <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">Tab 2</div>
+          <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">Tab 3</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
