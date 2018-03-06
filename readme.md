@@ -2,7 +2,7 @@
 This template will help you get started prototyping with bootstrap. It includes [bootstrap 4.0](https://getbootstrap.com/), [angularjs](https://angularjs.org/), 2 google fonts and [font awesome](https://fontawesome.com/icons).
 
 ## Getting Started
-Download this folder and start editing `index.html`.
+Download this folder and start editing [index.html](index.html).
 
 ### Interactive
 To make the prototype interactive use AngularJS and edit `[app.js](app.js)`.
