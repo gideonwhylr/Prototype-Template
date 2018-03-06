@@ -26,5 +26,42 @@ app.controller('Controller', ['$scope', '$window', '$location', '$anchorScroll',
     this.addItem();
     this.addItem();
 
+    this.navBarItems = [
+      "Knowledge Manager",
+      "Listings",
+      "Reviews",
+      "Pages",
+      "Analytics",
+    ]
+    this.selectedNavItem = "Pages"
+
+    this.subNavItems = [
+      "Overview",
+      "Knowledge Tags",
+      "Landing Pages",
+      "Search",
+    ]
+    this.selectedSubNavItem = this.subNavItems[0]
+
+
+    this.filters = [{
+      icon: "cog",
+      text: "All Entities",
+    },{
+      icon: "crop",
+      text: "Filter 1",
+    },{
+      icon: "cube",
+      text: "Filter 2",
+    },{
+      icon: "compass",
+      text: "Filter 3",
+    },{
+      icon: "desktop",
+      text: "Filter 4",
+    }]
+
+    this.selectedFilter = this.filters[0]
+
   }
 ]);
